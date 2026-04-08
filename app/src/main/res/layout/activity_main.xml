@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/soccer_img"
     tools:context=".MainActivity">
 
     <TextView
@@ -17,9 +18,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintVertical_bias="0.097" />
 
     <TextView
         android:id="@+id/teamsDisplayId"
@@ -27,7 +29,7 @@
         android:layout_height="wrap_content"
         android:text="Teams:"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="266dp" />
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="172dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
