@@ -1,12 +1,17 @@
 package com.example.topsoccerteams
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
+
+fun logArrValues(arr: Array<String>){
+    Log.v("Array values: ", Arrays.toString(arr))
+}
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,18 +26,25 @@ class MainActivity : AppCompatActivity() {
 
         //creating variable to hold textview tex
         val teamsTxt = findViewById<TextView>(R.id.teamsDisplayId)
-
-        //reassigned position 0 of teams array to a new value
-        teams[0] = "Mam Sundowns FC :)"
-
         //assigning array content to a variable
         var teamDisplay = ""
         var count = 0
 
-        while (count < teams.count()){
-            teamDisplay += "${teams[count]}\n"
-            count++
+        //reassigned position 0 of teams array to a new value
+        teams[0] = "Mam Sundowns FC :)"
+
+        //calling function to display all values from the teams array
+        logArrValues(teams)
+
+        //for loop to loop through the array and display all its values
+        for (team in teams){
+            teamDisplay += "${team}\n"
         }
+        //while loop to loop through the array and display all its values
+//        while (count < teams.count()){
+//            teamDisplay += "${teams[count]}\n"
+//            count++
+//        }
 //        teamDisplay += "${teams[0]}\n"
 //        teamDisplay += "${teams[1]}\n"
 //        teamDisplay += "${teams[2]}\n"
